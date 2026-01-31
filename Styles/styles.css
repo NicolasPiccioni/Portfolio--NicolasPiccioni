@@ -1,0 +1,1363 @@
+/*
+--------------------------------------------------------------------------------------------------------
+                                            GLOBAL STYLES  
+--------------------------------------------------------------------------------------------------------
+*/
+
+:root{
+    --BG-Color: #141414;
+    --BG-Menu: #1d1c22;
+    
+    --Text-Color: #fafafa;
+    --Secondary-TextColor: #919295;
+    --Accent: #2ff093;
+} 
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    
+    background-color: var(--BG-Color);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+p{
+    margin: 0;
+}
+
+/*
+--------------------------------------------------------------------------------------------------------
+                                            DESKTOP STYLES  
+--------------------------------------------------------------------------------------------------------
+*/
+
+/*
+---------------------------------------------------
+                 Navigation Styles
+---------------------------------------------------
+*/
+
+.Nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: var(--BG-Menu);
+    box-shadow: 0 0 30px 36px var(--BG-Color);
+}
+
+
+/* [+] ------------ Nav Sticky ------------ [+] */
+
+.Nav--CheckBox{
+    display: none;
+}
+
+.NavSticky{
+    display: flex;
+    align-items: center;
+
+    padding: 0px 12px;
+}
+
+/* [¡] ----- Logo ----- [!] */
+
+.NavSticky__Logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    width: 52px;
+
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 0px 6px var(--Accent);
+}
+
+/* [¡] ----- Menu Items Containers ----- [!] */
+
+.NavSticky__MenuSticky{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+    padding: 0;
+    margin: 0;
+
+    flex-grow: 1;
+
+    overflow: hidden;
+}
+
+.MenuSticky__Item{
+    list-style: none;
+}
+
+.MenuSticky__Link{
+    position: relative;
+    display: inline-block;
+
+    margin-top: 8px;
+    padding: 12px;
+
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+
+    color: var(--Text-Color);
+}
+
+.MenuSticky__Link:hover{
+    backdrop-filter: blur(100px);
+    background-color: var(--BG-Color);
+    
+    color: var(--Accent);
+}
+
+.MenuSticky__Link:hover::after{
+    content: '';
+    display: block;
+    position: absolute;
+
+    bottom: 0px;
+    left: -16px;
+
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+
+    border-bottom-right-radius: 24px;
+    box-shadow: 3px 3px 0px 3px var(--BG-Color);
+}
+
+.MenuSticky__Link:hover::before{
+    content: '';
+    display: block;
+    position: absolute;
+
+    bottom: 0px;
+    right: -16px;
+
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+
+    border-bottom-left-radius: 24px;
+    box-shadow: -3px 3px 0 3px var(--BG-Color);
+}
+
+.MenuSticky__Icon{
+    display: inline-block;
+
+    font-size: 2.4rem;
+}
+
+/* [¡] ----- Expand Button ----- [!] */ 
+
+.NavSticky__Expand--Label{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    cursor: pointer;
+    background-color: var(--BG-Color);
+    color: var(--Text-Color);
+
+    border-radius: 50%;
+    padding: 12px;
+
+    line-height: 0;
+}
+
+.NavSticky__Expand--Icon{
+    font-size: 1.8rem;
+}
+
+/* [+] ------------ Nav Expand ------------ [+] */
+
+.NavExpand{
+    display: none;
+}
+
+.Nav:has(#Nav__Expand:is(:checked)) .NavSticky{
+    display: none;
+}
+
+.Nav:has(#Nav__Expand:is(:checked)) .NavExpand{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    height: 100dvh;
+
+    background-color: #14141488;
+}
+
+.Nav:has(#Nav__Expand:is(:checked)) .NavExpand--Container{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 300px;
+    height: 100dvh;
+    padding: 12px 0;
+
+    background-color: var(--BG-Menu);
+    box-shadow: 0 0 8px 12px #14141466;
+}
+
+/* [¡] ----- Logo ----- [!] */
+
+.NavExpand__Logo--Container{
+    width: 80%;
+    border-bottom: 1px solid #3336;
+    padding-bottom: 12px;
+
+    text-align: center;
+}
+
+.NavExpand__Logo{
+    width: 100px;
+
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 0px 6px var(--Accent);
+}
+
+/* [¡] ----- Toggle Button ----- [!] */
+
+.Nav:has(#Nav__Expand:is(:checked)) .NavExpand__Close--Label{
+    position: absolute;
+    top: 16px;
+    right: 276px;
+
+    cursor: pointer;
+    background-color: var(--BG-Menu);
+    color: var(--Text-Color);
+    box-shadow: 0 0 16px 8px var(--BG-Color);
+
+    border-radius: 20%;
+    padding: 12px;
+
+    line-height: 0;
+}
+
+/* [¡] ----- Menu Items Containers ----- [!] */
+
+.NavExpand__MenuExpand{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.MenuExpand__Item{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+.MenuExpand__Link{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    width: 80%;
+    padding: 8px 8px 8px 12px;
+
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--Text-Color);
+    letter-spacing: 1.8px;
+}
+
+.MenuExpand__Link:hover{
+    background-color: var(--BG-Color);
+    border-radius: 24px;
+    
+    color: var(--Accent);
+}
+
+.MenuExpand--Icons{
+    font-size: 1.6rem;
+}
+
+.MenuExpand__Link > p{
+    display: inline-block;
+}
+
+/* [¡] ----- Social Media Links ----- [!] */
+
+.NavExpand_SocialMedia--Container{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+
+    padding-top: 12px;
+    border-top: 1px solid #3336;
+}
+
+.SocialMedia__Icon{
+    padding: 8px;
+
+    background-color: #3336;
+    fill: var(--Secondary-TextColor);
+    border-radius: 8px;
+}
+
+.SocialMedia__Icon:hover{
+    fill: var(--Accent);
+}
+
+/*
+---------------------------------------------------
+                    Main Styles
+---------------------------------------------------
+*/
+
+/*
+--------------------------
+     AboutMe Section
+--------------------------
+*/
+
+.Main{
+   position: relative;
+   
+   width: 100%;
+   padding: 42px 32px;
+
+   z-index: 0;
+}
+
+.Main--Container{
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+
+    flex-grow: 1;
+}
+
+.Main__AboutMe{
+    display: flex;
+    justify-content: center;
+
+    padding: 24px 18px 18px;
+
+    position: relative;
+}
+
+/* ----- Profile Pic ----- */
+
+
+.AboutMe__Image--Container{
+    position: relative;
+
+    min-width: 100px;
+    max-width: 200px;
+    
+    margin-top: 16px;
+    margin-right: 24px;
+}
+
+.AboutMe__Image--Container::after{
+    content: '';
+    display: block;
+    
+    position: absolute;
+    
+    top: 85px;
+    left: -30px;
+
+    width: 200px;
+    height: 300px;
+
+    background-color: transparent;
+    
+    box-shadow: 0 0px 8px 4px var(--Accent);
+
+    z-index: -1;
+
+}
+
+.AboutMe__Image{
+    width: 100%;
+
+    background-color: var(--BG-Color);
+    
+    object-fit: cover;
+    object-position: top;
+
+    box-shadow: 0 0px 6px #fff;
+
+    position: relative;
+}
+
+/* ----- About Me Text ----- */
+
+.AboutMe__RightContent--Container{
+    display: flex;
+    flex-direction: column;
+}
+
+.AboutMe__Text--Container{
+    max-width: 600px;
+    padding: 24px 16px 16px;
+
+    border-radius: 8px;
+
+    height: fit-content;
+
+    position: relative;
+
+    background: linear-gradient(to bottom, var(--BG-Menu), transparent);
+    border-top: 1px solid var(--Accent);
+    color: white;
+
+    box-shadow: 0px -9px 8px -6px rgba(47,240,147,0.25);
+}
+
+.AboutMe__Title{
+    position: absolute;
+    margin: 0;
+    
+    top: -24px;
+    left: 24px;
+
+    border-radius: 24px;
+    padding: 6px 16px;
+
+    letter-spacing: 3px;
+    background: linear-gradient(to bottom, var(--BG-Color), var(--BG-Menu));
+
+    border-left: 3px solid var(--Accent);
+    border-right: 3px solid var(--Accent);
+}
+
+.AboutMe__Name{
+    margin: 8px 0 2px;
+    font-size: 2rem;
+}
+
+.AboutMe__Name > span{
+    color: var(--Accent);
+}
+
+.AboutMe__Desc{
+    margin: 0 0 16px;
+    color: var(--Secondary-TextColor);
+}
+
+.AboutMe__Text{
+    margin-bottom: 16px;
+    color: var(--Secondary-TextColor);
+
+    text-align: justify;
+
+    font-size: .9rem;
+}
+
+.AboutMe__OpenToWork--Container{
+    position: absolute;
+    
+    bottom: -12px;
+    left: 32px;
+
+    padding: 3px;
+    background-color: #e83056;
+}
+
+.CV--Link{
+    display: inline-block;
+    margin: 24px 0 0 24px;
+    padding: 16px 24px;
+
+    background-color: var(--BG-Menu);
+
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1.4px;
+
+    border-bottom: 2px solid rgba(47,240,147,0.25);
+    font-weight: 700;
+}
+
+.CV--Link:hover{
+    outline: 2px solid var(--Accent);
+    box-shadow: 0px 0px 24px rgba(47,240,147,0.25);
+    
+    border-bottom: none;
+}
+
+/*
+--------------------------
+    Tecnology Section
+--------------------------
+*/
+
+/* ----- Section Title ----- */
+
+.Main__Tecnology{
+    padding: 24px 18px 18px;
+    margin-top: 36px;
+    margin-bottom: 42px;
+}
+
+.Tecnology__Title{
+    position: relative;
+
+    width: fit-content;
+    padding: 12px 24px;
+    margin: 0 auto 72px;
+
+    background-color: var(--BG-Color);
+    border-radius: 24px;
+    border-right: 3px solid var(--Accent);
+    border-left: 3px solid var(--Accent);
+
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    letter-spacing: 2px;
+    color: var(--Text-Color);
+    text-align: center;
+
+    animation: glow 2s linear infinite alternate;
+}
+
+.Tecnology__Title::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(-1 * clamp(30px, 8vw, 80px));
+
+    width: clamp(30px, 8vw, 80px);
+    height: 2px;
+
+    background: linear-gradient(to left, var(--Accent), var(--BG-Color));
+}
+
+.Tecnology__Title::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: calc(-1 * clamp(30px, 8vw, 80px));
+
+    width: clamp(30px, 8vw, 80px);
+    height: 2px;
+
+    background: linear-gradient(to right, var(--Accent), var(--BG-Color));
+}
+
+@keyframes glow {
+  0% {
+    text-shadow:
+      0 0 4px rgba(47, 240, 147, 0.4),
+      0 0 10px rgba(47, 240, 147, 0.2);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(47, 240, 147, 0.8),
+      0 0 18px rgba(47, 240, 147, 0.8);
+  }
+}
+
+/* ----- Tecnology List ----- */
+
+.Tecnology__List{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.TecnologyList__List{
+    position: relative;
+    flex-basis: 280px;
+
+    padding: 16px 12px;
+    margin-bottom: 32px;
+
+    background: linear-gradient(to bottom, var(--BG-Menu), var(--BG-Color));
+    border-top: 1px solid rgba(47,240,147,0.25);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+
+    list-style: none;
+}
+
+.TecnologyList__List:hover{
+    border-top-color: var(--Accent);
+}
+
+.TecnologyList__List:hover .TecnologyList__Title{
+    border-top-color: var(--Accent);
+    border-left-color: var(--Accent);
+    border-right-color: var(--Accent);
+}
+
+.TecnologyList__List:hover .TecnologyList__Logo{
+    color: var(--Text-Color);
+}
+
+.TecnologyList__Title{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    left: 0;
+    
+    width: fit-content;
+    margin: 0 auto;
+    padding: 12px;
+
+    background-color: var(--BG-Menu);
+    border-radius: 24px;
+    border-top: 1px solid rgba(47,240,147,0.25);
+    border-left: 3px solid rgba(47,240,147,0.25);
+    border-right: 3px solid rgba(47,240,147,0.25);
+
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1.2px;
+    color: var(--Text-Color);
+}
+
+.TecnologyList__Logo{
+    display: block;
+    width: 60%;
+    
+    box-sizing: content-box;
+    padding: 16px;
+    margin: 6px auto 24px;
+
+    color: #fafafa88;
+    border-bottom: 1px solid #3336;
+
+    text-align: center;
+}
+
+.TecnologyList__TecnologiesList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 0 0 24px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.TecnologiesList__Item{
+    padding: 8px;
+
+    border-radius: 6px;
+    background-color: var(--Secondary-TextColor);
+    
+    font-size: .7rem;
+    font-weight: bold;
+    color: var(--BG-Color);
+}
+
+/*
+--------------------------
+    Education Section
+--------------------------
+*/
+
+/* ----- Education Containers ----- */
+
+.Main__Education{
+    position: relative;
+
+    padding: 0 0px 18px;
+    margin-bottom: 56px;
+}
+
+.Education__TimeLine--Container{
+    max-width: 90%;
+
+    margin: auto;
+}
+
+.Education__TimeLine--Container::after{
+    content: '';
+    position: absolute;
+
+    width: 5px;
+    height: 100%;
+
+    top: 0;
+    left: 50%;
+
+    background: linear-gradient(to bottom, #2ff093 70%, var(--BG-Color));
+}
+
+/* ----- Education List ----- */
+
+.TimeLine__Cards--Container{
+    position: relative;
+
+    width: 50%;
+    margin: 0;
+    padding: 10px 32px;
+
+    list-style: none;
+}
+
+.TimeLineCards__Item{
+    position: relative;
+
+    padding-bottom: 20px;
+    
+    background: linear-gradient(to bottom, var(--BG-Menu), var(--BG-Color));
+    border-radius: 6px;
+}
+
+.TimeLineCards__Container--Left{
+    left: 0;
+}
+
+.TimeLineCard__Cicle--Left::after{
+    content: '';
+    position: absolute;
+    top: -18px;
+    right: -21px;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+    background-color: var(--Accent);
+    box-shadow: 0 0 12px 3px rgba(47, 240, 147, 0.4);
+
+    z-index: 1000;
+}
+
+.TimeLineCard__Icon--Right{
+    position: absolute;
+    top: -12px;
+    right: -15px;
+    z-index: 1200;
+
+    color: var(--BG-Menu);
+}
+
+.TimeLineCard__Icon--Left{
+    position: absolute;
+    top: -12px;
+    left: -9px;
+
+    z-index: 1200;
+    color: var(--BG-Menu);
+}
+
+.TimeLineCards__Container--Right{
+    left: 50%;
+}
+
+.TimeLineCard__Cicle--Right::after{
+    content: '';
+    position: absolute;
+    top: -18px;
+    left: -15px;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+    background-color: var(--Accent);
+    box-shadow: 0 0 12px 3px rgba(47, 240, 147, 0.4);
+
+    z-index: 1000;
+}
+
+.TimeLineCard__Title{
+    margin: 0;
+    padding: 12px 12px 0;
+
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    color: var(--Text-Color);
+}
+
+.TimeLineCard__Title--Extend{
+    display: block;
+
+    margin-bottom: 12px;
+    padding: 2px 12px 12px;
+    
+    border-bottom: 1px solid rgba(47, 240, 147, 0.2);
+
+    color: var(--Secondary-TextColor);
+}
+
+.TimeLineCard__Text{
+    padding: 12px;
+    color: var(--Secondary-TextColor);
+}
+
+.TimeLineCard__Time--Left{
+    position: absolute;
+    top: -32px;
+    right: 16px;
+
+    padding: 4px 8px;
+
+    background: linear-gradient(to left, var(--Accent), #0fb9a7);
+    border-radius: 8px;
+
+    letter-spacing: .8px;
+    font-weight: bold;
+    color: #0b1f1a;
+}
+
+.TimeLineCard__Time--Right{
+    position: absolute;
+    top: -32px;
+    left: 16px;
+
+    padding: 4px 8px;
+
+    background: linear-gradient(to right, var(--Accent), #0fb9a7);
+    border-radius: 8px;
+
+    letter-spacing: .8px;
+    font-weight: bold;
+    color: #0b1f1a;
+}
+
+/*
+--------------------------
+  Certification Section
+--------------------------
+*/
+
+/* ----- Certifications Containers ----- */
+
+.Main__Certification{
+    margin-bottom: 56px;
+}
+
+.Certification--Container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 0 86px;
+    margin: 0;
+
+    list-style: none;
+}
+
+/* ----- Certifications List ----- */
+
+.Certification--List{
+    display: flex;
+
+    padding: 8px 16px;
+
+    border-radius: 8px;
+    background-color: var(--BG-Menu);
+}
+
+.Certification--List:has(.CertificationItem__Expand:is(:checked)){
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.CertificationItem__Expand{
+    display: none;
+}
+
+.CertificationItem--Logo{
+    width: 74px;
+
+    aspect-ratio: 1/1;
+}
+
+.CertificationItem--Divisor{
+    width: 1px;
+
+    margin: 0 16px;
+
+    background-color: #3336;
+}
+
+.CertificationItem__Info--Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    flex-grow: 1;
+}
+
+.CertificationItem--Title{
+    margin: 0;
+
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: bold;
+    color: var(--Text-Color);
+}
+
+.CertificationItem--Description{
+    color: var(--Secondary-TextColor);
+}
+
+.CertificationItem--Number{
+    color: var(--Accent);
+}
+
+.Certification__ExpandButton--Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+}
+
+.CertificationItem--ExpandButton{
+    cursor: pointer;
+
+    font-size: 3rem;
+    color: var(--Text-Color);
+}
+
+/* ----- Certifications List Expand ----- */
+
+.CertificationItem__MoreInfo--Container{
+    display: none;
+
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.CertificationItem__MoreInfo--Container{
+    width: 100%;
+    padding: 16px;
+
+    background-color: var(--BG-Menu);
+}
+
+.Certification--Container:has(#CertificationItem--CoderHouse:is(:checked)) .CertificationItem--Corderhouse{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.Certification--Container:has(#CertificationItem--PotenciarArgentina:is(:checked)) .CertificationItem--PotenciarArgentina{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    flex-grow: 1;
+}
+
+.CertificationItem__MoreInfo--List{
+    flex-grow: 1;
+    max-width: 350px;
+
+    padding: 16px;
+
+    box-shadow: 0 0 12px #3366;
+    border-radius: 8px;
+    background-color: #14141466;
+
+    list-style: none;
+}
+
+.CertificationItem__MoreInfo--Title{
+    margin: 0;
+
+    color: var(--Text-Color);
+}
+
+.CertificationItem__MoreInfo--Date{
+    margin: 4px 0;
+
+    color: var(--Accent);
+}
+
+.CertificationItem__MoreInfo--TecnologiesContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    
+    padding: 36px 0;
+}
+
+.CertificationItem__MoreInfo--Tecnologies{
+    padding: 4px 8px;
+
+    border-radius: 8px;
+
+    background-color: #2ff09311;
+    color: var(--Accent);
+}
+
+.CertificationItem__MoreInfo--Link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    width: fit-content;
+    padding: 12px 16px;
+
+    border: 1px solid var(--Text-Color);
+    border-radius: 24px;
+    color: var(--Text-Color);
+
+    text-decoration: none;
+}
+
+.CertificationItem__MoreInfo--Link:hover{
+    border-color: var(--Accent);
+    box-shadow: 0 0 12px rgba(47,240,147,0.4);
+}
+
+/*
+--------------------------
+    What I Do Section
+--------------------------
+*/
+
+/* ----- What I Do Containers ----- */
+
+.WID__List--Container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    margin: 0;
+    padding: 0 86px;
+
+    list-style: none;
+}
+
+/* ----- What I Do Items ----- */
+
+.WID__List{
+    display: flex;
+    gap: 16px;
+
+    flex: 1 1 350px;
+
+    margin: 0 0 24px;
+    padding: 24px;
+
+    border-radius: 12px;
+    background: linear-gradient(to bottom, var(--BG-Menu), var(--BG-Color));
+}
+
+.WID__List:hover{
+    box-shadow: 0 0 12px rgba(47,240,147,0.4);
+    background-color: var(--BG-Color);
+}
+
+.WID__List--Logo{
+    margin-top: 8px;
+    flex-shrink: 0;
+    flex-grow: 1;
+
+    color: var(--Text-Color);
+}
+
+.WID__List--InfoContainer{
+    flex-grow: 1;
+}
+
+.WID__List--Title{
+    margin: 0 0 12px;
+
+    letter-spacing: .6px;
+    color: var(--Text-Color);
+}
+
+.WID__List--Text{
+    font-size: .9rem;
+    color: var(--Secondary-TextColor);
+}
+
+/*
+--------------------------
+          Footer
+--------------------------
+*/
+
+.Footer{
+    text-align: center;
+    padding: 24px 12px;
+
+    color: var(--Text-Color);
+    font-size: .9rem;
+}
+
+.Footer__Link{
+    color: var(--Accent);
+    text-decoration: none;
+}
+
+.Footer__Link:hover{
+    text-shadow: 0px 0px 4px var(--Accent);
+}
+
+.Footer__Text--II{
+    margin-top: 3px;
+    font-size: .7rem;
+}
+
+/*
+--------------------------------------------------------------------------------------------------------
+                                            MOBILE STYLES  
+--------------------------------------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 768px) {
+
+    /*
+    --------------------------------------------------
+                         Main Styles
+    ---------------------------------------------------
+    */
+
+    .Main{
+        padding-top: 12px;
+    }
+
+    .Main__AboutMe{
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .AboutMe__Image--Container{
+        width: fit-content;
+        margin: 0;
+    }
+
+    .AboutMe__Image--Container::after{
+        width: auto;
+        height: auto;
+
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+
+        border-radius: 50%;
+        
+        background: conic-gradient(
+            var(--Accent) 0deg, 
+            transparent 60deg
+        );
+
+        mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 0); 
+        animation: spin 1.4s linear infinite;
+        box-shadow: none;
+    }
+
+    .AboutMe__Image--Container::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+
+        border-radius: 50%;
+        
+        background: conic-gradient(
+            var(--Accent) 0deg, 
+            transparent 60deg
+        );
+
+        mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 0); 
+        animation: spin 1.4s linear infinite;
+        animation-delay: -0.7s;
+    }
+
+    .AboutMe__Image{
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        box-shadow: none;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .AboutMe__CV{
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+
+        margin-top: 12px;
+    }
+
+    .CV--Link{
+        min-width: 170px;
+        margin: 0;
+    }
+
+    .CV--Link:hover{
+        border-bottom: 2px solid var(--Accent);
+    }
+
+    /*
+    --------------------------------------------------
+                     Education Styles
+    ---------------------------------------------------
+    */
+
+    .Main__Education{
+        padding: 0;
+    }
+
+    .TimeLine__Cards--Container{
+        width: 100%;
+
+        margin-top: 32px;
+    }
+
+    .TimeLineCards__Container--Right{
+        left: 0;
+    }
+
+    .Education__TimeLine--Container{
+        max-width: 100%;
+    }
+
+    .Education__TimeLine--Container::after{
+        content: '';
+        position: absolute;
+
+        width: 5px;
+        height: 100%;
+
+        top: 0;
+        left: 0;
+
+        background-color: #2ff093;
+    }
+
+    .TimeLineCard__Time--Left{
+        left: 16px;
+        right: auto;
+
+        background: linear-gradient(to right, var(--Accent), #0fb9a7);
+    }
+
+    .TimeLineCard__Cicle--Left::after{
+        left: -15px;
+    }
+
+    .TimeLineCard__Icon--Right{
+        left: -9px;
+    }
+
+    /*
+    --------------------------------------------------
+                     Certification Styles
+    ---------------------------------------------------
+    */
+
+    .Certification--Container{
+        padding: 0 24px;
+    }
+
+    .CertificationItem__MoreInfo--List{
+        max-width: 100%;
+    }
+
+    /*
+    --------------------------------------------------
+                    What I Do Styles
+    ---------------------------------------------------
+    */
+
+    .WID__List--Container{
+        padding: 0;
+    }
+
+}
+
+/*
+---------------------------------------------------
+                    486 Width
+---------------------------------------------------
+*/
+
+@media screen and (max-width: 486px) {
+
+    .CertificationItem__Info--Container{
+        display: none;
+    }
+
+    .Certification__ExpandButton--Container{
+        align-items: flex-end;
+        flex-grow: 1;
+    }
+
+}
+
+/*
+---------------------------------------------------
+                    420 Width
+---------------------------------------------------
+*/
+
+@media screen and (max-width: 420px) {
+
+    /*
+    ---------------------------------------------------
+                        Main Styles
+    ---------------------------------------------------
+    */
+
+    .Nav{
+        height: 74px;
+        background-color: var(--BG-Menu);
+    }
+
+    .NavSticky__MenuSticky{
+        display: none;
+    }
+
+    .Nav:has(#Nav__Expand:is(:checked)){
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+}
