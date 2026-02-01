@@ -15,7 +15,7 @@
 
 body{
     margin: 0;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     
     background-color: var(--BG-Color);
 }
@@ -290,7 +290,6 @@ p{
     font-size: 1.6rem;
     text-decoration: none;
     color: var(--Text-Color);
-    letter-spacing: 1.8px;
 }
 
 .MenuExpand__Link:hover{
@@ -411,6 +410,7 @@ p{
     
     object-fit: cover;
     object-position: top;
+    /*filter: grayscale(.3);*/
 
     box-shadow: 0 0px 6px #fff;
 
@@ -460,16 +460,19 @@ p{
 
 .AboutMe__Name{
     margin: 8px 0 2px;
-    font-size: 2rem;
+    font-size: clamp(1rem, 4vw, 2.4rem);
 }
 
 .AboutMe__Name > span{
+    display: inline-block;
     color: var(--Accent);
 }
 
 .AboutMe__Desc{
     margin: 0 0 16px;
     color: var(--Secondary-TextColor);
+
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
 }
 
 .AboutMe__Text{
@@ -827,7 +830,7 @@ p{
     top: -32px;
     right: 16px;
 
-    padding: 4px 8px;
+    padding: 0px 8px;
 
     background: linear-gradient(to left, var(--Accent), #0fb9a7);
     border-radius: 8px;
@@ -842,7 +845,7 @@ p{
     top: -32px;
     left: 16px;
 
-    padding: 4px 8px;
+    padding: 0px 8px;
 
     background: linear-gradient(to right, var(--Accent), #0fb9a7);
     border-radius: 8px;
@@ -1011,7 +1014,7 @@ p{
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    
+
     padding: 36px 0;
 }
 
