@@ -929,6 +929,7 @@ p{
 }
 
 .CertificationItem--Description{
+    font-size: clamp(0.76rem, 2vw, 1rem);
     color: var(--Secondary-TextColor);
 }
 
@@ -1001,6 +1002,8 @@ p{
 .CertificationItem__MoreInfo--Title{
     margin: 0;
 
+    font-size: clamp(1rem, 2vw, 1.4rem);
+
     color: var(--Text-Color);
 }
 
@@ -1025,6 +1028,8 @@ p{
 
     background-color: #2ff09311;
     color: var(--Accent);
+
+    font-size: clamp(0.8rem, 1.5vw, .92rem);
 }
 
 .CertificationItem__MoreInfo--Link{
@@ -1155,7 +1160,7 @@ p{
     */
 
     .Main{
-        padding-top: 12px;
+        padding: 12px 0;
     }
 
     .Main__AboutMe{
@@ -1246,6 +1251,8 @@ p{
 
     .Main__Education{
         padding: 0;
+
+        margin: 0 0px 0 28px;
     }
 
     .TimeLine__Cards--Container{
@@ -1311,7 +1318,7 @@ p{
     */
 
     .WID__List--Container{
-        padding: 0;
+        padding: 0 24px;
     }
 
 }
@@ -1323,10 +1330,6 @@ p{
 */
 
 @media screen and (max-width: 486px) {
-
-    .CertificationItem__Info--Container{
-        display: none;
-    }
 
     .Certification__ExpandButton--Container{
         align-items: flex-end;
@@ -1361,6 +1364,20 @@ p{
     .Nav:has(#Nav__Expand:is(:checked)){
         background-color: transparent;
         box-shadow: none;
+    }
+
+    /*
+    ---------------------------------------------------
+                    Certification Styles
+    ---------------------------------------------------
+    */
+
+    .CertificationItem--Logo{
+        display: none;
+    }
+
+    .CertificationItem--Divisor{
+        display: none;
     }
 
 }
