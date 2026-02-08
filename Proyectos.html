@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos</title>
+
+    <!-- Fuente Poppins -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Íconos de Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link rel="stylesheet" href="Styles/styles.css?v=1.0.3"> <!-- Styles -->
+
+</head>
+<body>
+
+    <!-- ------------ Sidebar Menu ------------ -->
+
+    <nav class="Nav">
+
+        <input type="checkbox" id="Nav__Expand" class="Nav--CheckBox">
+    
+        <!-- Nav Sticky -->
+
+        <div class="NavSticky">
+            
+            <!-- Logo -->
+
+            <div class="NavSticky__Logo--Container">
+                <img src="Assets/Logo.png" alt="Foto de Perfil" class="NavSticky__Logo">
+            </div>
+
+            <!-- Menu Items Containers -->
+
+            <ul class="NavSticky__MenuSticky">
+
+                <li class="MenuSticky__Item">
+                    <a href="index.html" class="MenuSticky__Link">
+                        <span class="material-symbols-outlined MenuSticky__Icon">Home</span>
+                    </a>
+                </li>
+
+                <li class="MenuSticky__Item">
+                    <a href="Proyectos.html" class="MenuSticky__Link">
+                        <span class="material-symbols-outlined MenuSticky__Icon">Work</span>
+                    </a>
+                </li>
+
+                <li class="MenuSticky__Item">
+                    <a href="#" class="MenuSticky__Link">
+                        <span class="material-symbols-outlined MenuSticky__Icon">Mail</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Expand Button -->
+
+            <label for="Nav__Expand" class="NavSticky__Expand--Label">
+                <span class="material-symbols-outlined NavSticky__Expand--Icon">keyboard_double_arrow_left</span>
+            </label>
+
+        </div>
+
+        <!-- Nav Expand -->
+
+        <div class="NavExpand">
+            
+            <div class="NavExpand--Container">
+            
+                <!-- Logo -->
+
+                <div class="NavExpand__Logo--Container">
+                    <img src="Assets/Logo.png" alt="Foto de Perfil" class="NavExpand__Logo">
+                </div>
+
+                <!-- Toggle Button -->
+
+                <label for="Nav__Expand" class="NavExpand__Close--Label">
+                    <span class="material-symbols-outlined NavExpand__Close--Icon">close</span>
+                </label>
+
+                <!-- Menu Items Containers -->
+
+                <ul class="NavExpand__MenuExpand">
+
+                    <li class="MenuExpand__Item">
+                        <a href="index.html" class="MenuExpand__Link">
+                            <span class="material-symbols-outlined MenuExpand--Icons">Home</span><p>Sobre Mí</p></a>
+                    </li>
+
+                    <li class="MenuExpand__Item">
+                        <a href="Proyectos.html" class="MenuExpand__Link">
+                            <span class="material-symbols-outlined MenuExpand--Icon">Work</span><p>Proyectos</p></a>
+                    </li>
+
+                    <li class="MenuExpand__Item">
+                        <a href="#" class="MenuExpand__Link">
+                            <span class="material-symbols-outlined MenuExpand--Icon">Mail</span><p>Contactame</p></a>
+                    </li>
+
+                </ul>
+
+                <!-- Social Media Links -->
+
+                <div class="NavExpand_SocialMedia--Container">
+
+                    <a href="https://www.linkedin.com/in/nico-piccioni" class="SocialMedia__Link" target="_blank">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" viewBox="0 0 24 24" class="SocialMedia__Icon">
+                            <path d="M4.983 2.821a2.188 2.188 0 1 0 0 4.376 2.188 2.188 0 1 0 0-4.376m4.254 6.034v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66zm-6.142 0H6.87v12.139H3.095z"></path>
+                        </svg></a>
+
+                    <a href="https://github.com/NicolasPiccioni" class="SocialMedia__Link" target="_blank">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" viewBox="0 0 24 24" class="SocialMedia__Icon">
+                            <path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path>
+                        </svg></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ------------ Sidebar Menu End ------------ -->
+
+    <!-- ------------ Projects ------------ -->
+
+    <main class="Main__Projects">
+
+        <h2 class="MainTitle">Proyectos Destacados</h2>
+
+        <!-- ----- Top Projects -->
+
+        <section class="Main__TopProjects">
+
+            <!-- TopProjects I -->
+
+            <div class="TopProjects__Container--Project">
+
+                <!-- TopProjects Image -->
+
+                <div class="TopProjects__IMG--Container TopProjects__IMG--ContainerI"></div>
+
+                <div class="TopProjects__Container">
+
+                    <!-- TopProjects Title-->
+
+                    <div class="TopProjects__Title--Container">
+                        <h3 class="TopProjects__Title">Proyecto Destacado</h3>
+                        <h4 class="TopProjects__SubTitle">Alta Clientes</h4>
+                    </div>
+
+                    <!-- TopProjects Text -->
+
+                    <p class="TopProjects__Text">Sistema de Alta para Clientes, Permite cargar y visualizar cara cliente y realizar búsqueda mediante filtros. Sistema Login integrado utilizando Base de Datos MySQL.</p>
+
+                    <!-- TopProjects Languages & Links -->
+
+                    <div class="TopProjects__Languages--Containter">
+                        <ul class="TopProjects__Languages--List">
+                            <li class="TopProjects__Languages--Item">HTML</li>
+                            <li class="TopProjects__Languages--Item">CSS</li>
+                            <li class="TopProjects__Languages--Item">VSCode</li>
+                            <li class="TopProjects__Languages--Item">Java</li>
+                            <li class="TopProjects__Languages--Item">MySQL</li>
+                            <li class="TopProjects__Languages--Item">Git</li>
+                            <li class="TopProjects__Languages--Item">GitHub</li>
+                            <li class="TopProjects__Languages--Item">Tomcat</li>
+                        </ul>
+
+                        <a href="https://github.com/NicolasPiccioni/Alta-Clientes" class="TopProjects__Languages--Link"><svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path></svg></a>
+
+                        <a href="#" class="TopProjects__Languages--Link"><svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24" ><path d="M12.71 12.71 19 6.41V11h2V3h-8v2h4.59l-6.3 6.29z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path></svg></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TopProjects II -->
+
+            <div class="TopProjects__Container--Project TopProjects__Container--ProjectReverse">
+
+                <!-- TopProjects Image -->
+
+                <div class="TopProjects__IMG--Container TopProjects__IMG--ContainerReverse TopProjects__IMG--ContainerII"></div>
+
+                <div class="TopProjects__Container TopProjects__ContainerReverse">
+
+                    <!-- TopProjects Title-->
+
+                    <div class="TopProjects__Title--Container TopProjects__Title--ContainerReverse">
+                        <h3 class="TopProjects__Title">Proyecto Destacado</h3>
+                        <h4 class="TopProjects__SubTitle">Portfolio Personal</h4>
+                    </div>
+
+                    <!-- TopProjects Text -->
+
+                    <p class="TopProjects__Text">Portfolio desarrollado desde cero utilizando HTML y CSS nativo, aplicando Flexbox y Grid para la maquetación. Está pensado con enfoque en responsive design, adaptándose a distintos tamaños de pantalla. El objetivo fue crear una interfaz clara, ordenada y funcional para mostrar mis proyectos y habilidades.</p>
+
+                    <!-- TopProjects Languages & Links -->
+
+                    <div class="TopProjects__Languages--Containter TopProjects__Languages--ContainterReverse">
+                        <ul class="TopProjects__Languages--List TopProjects__Languages--ListReverse">
+                            <li class="TopProjects__Languages--Item">HTML</li>
+                            <li class="TopProjects__Languages--Item">CSS</li>
+                            <li class="TopProjects__Languages--Item">VSCode</li>
+                            <li class="TopProjects__Languages--Item">Git</li>
+                            <li class="TopProjects__Languages--Item">GitHub</li>
+                        </ul>
+
+                        <a href="https://github.com/NicolasPiccioni/Portfolio--NicolasPiccioni" class="TopProjects__Languages--Link"><svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path></svg></a>
+
+                        <a href="https://nicolaspiccioni.github.io/Portfolio--NicolasPiccioni/" class="TopProjects__Languages--Link"><svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24" ><path d="M12.71 12.71 19 6.41V11h2V3h-8v2h4.59l-6.3 6.29z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path></svg></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TopProjects III -->
+
+            <div class="TopProjects__Container--Project">
+
+                <!-- TopProjects Image -->
+
+                <div class="TopProjects__IMG--Container TopProjects__IMG--ContainerIII"></div>
+
+                <div class="TopProjects__Container">
+
+                    <!-- TopProjects Title-->
+
+                    <div class="TopProjects__Title--Container">
+                        <h3 class="TopProjects__Title">Proyecto Destacado</h3>
+                        <h4 class="TopProjects__SubTitle">Análisis de Inversiones</h4>
+                    </div>
+
+                    <!-- TopProjects Text -->
+
+                    <p class="TopProjects__Text">Sistema Gestor de Inversiones. Calcula según determinado capital cuál es el mejor banco para realizar la inversión. Adaptado a Dispositivos Móviles y utilizando metodologías tales como POO.</p>
+
+                    <!-- TopProjects Languages & Links -->
+
+                    <div class="TopProjects__Languages--Containter">
+                        <ul class="TopProjects__Languages--List">
+                            <li class="TopProjects__Languages--Item">HTML</li>
+                            <li class="TopProjects__Languages--Item">CSS</li>
+                            <li class="TopProjects__Languages--Item">VSCode</li>
+                            <li class="TopProjects__Languages--Item">C#</li>
+                            <li class="TopProjects__Languages--Item">.NET</li>
+                            <li class="TopProjects__Languages--Item">Git</li>
+                            <li class="TopProjects__Languages--Item">GitHub</li>
+                        </ul>
+
+                        <a href="https://github.com/NicolasPiccioni/Analisis-de-Inversiones" class="TopProjects__Languages--Link"><svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path></svg></a>
+
+                        <a href="#" class="TopProjects__Languages--Link"><svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 24 24" ><path d="M12.71 12.71 19 6.41V11h2V3h-8v2h4.59l-6.3 6.29z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path></svg></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ----- Top Projects End -->
+
+        <!-- ----- Projects -->
+
+        <h2 class="MainTitle">Otros Proyectos</h2>
+
+        <section class="Projects__Container">
+
+            <ul class="AllProjects__List">
+
+                <!-- Project I -->
+
+                <li class="AllProjects__Item">
+
+                    <div class="AllProjects__Logos--Container">
+                        <span class="material-symbols-outlined AllProjects__Logos--Folder">folder</span>
+                        <div class="AllProjects__Links--Container">
+                            
+                            <a href="https://github.com/NicolasPiccioni/Gestor-Turnos-Medicos" class="AllProjects__Links--Item"><svg  xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path></svg></a>
+
+                        </div>
+                    </div>
+
+                    <div class="AllProjects__Info--Container">
+                        <h3 class="AllProjects__Info--Title">Gestor de Turnos Médicos</h3>
+                        <p class="AllProjects__Info--Description">Sistema Gestor de Turnos Médicos. ABML de Pacientes, Sistema de Login (Administradores y Usuarios), Asignación de Turnos.</p>
+                    </div>
+
+                    <ul class="AllProjects__Languages--List">
+                        <li class="AllProjects__Languages--Item">XML</li>
+                        <li class="AllProjects__Languages--Item">C#</li>
+                        <li class="AllProjects__Languages--Item">.NET</li>
+                        <li class="AllProjects__Languages--Item">SQLServer</li>
+                        <li class="AllProjects__Languages--Item">Git</li>
+                        <li class="AllProjects__Languages--Item">GitHub</li>
+                    </ul>
+
+                </li>
+
+                <!-- Project II -->
+
+                <li class="AllProjects__Item">
+
+                    <div class="AllProjects__Logos--Container">
+                        <span class="material-symbols-outlined AllProjects__Logos--Folder">folder</span>
+                        <div class="AllProjects__Links--Container">
+                            
+                            <a href="https://github.com/NicolasPiccioni/Cuevita" class="AllProjects__Links--Item"><svg  xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path></svg></a>
+
+                        </div>
+                    </div>
+
+                    <div class="AllProjects__Info--Container">
+                        <h3 class="AllProjects__Info--Title">Cuevita</h3>
+                        <p class="AllProjects__Info--Description">Sistema de Gestión para películas, Clientes y Ventas. Con reportes integrados (Película más vendida, Ventas x Mes, Ventas x Cliente, etc).</p>
+                    </div>
+
+                    <ul class="AllProjects__Languages--List">
+                        <li class="AllProjects__Languages--Item">C++</li>
+                        <li class="AllProjects__Languages--Item">Git</li>
+                        <li class="AllProjects__Languages--Item">GitHub</li>
+                    </ul>
+
+                </li>
+
+                <!-- Project III -->
+
+                <li class="AllProjects__Item">
+
+                    <div class="AllProjects__Logos--Container">
+                        <span class="material-symbols-outlined AllProjects__Logos--Folder">folder</span>
+                        <div class="AllProjects__Links--Container">
+                            
+                            <a href="https://github.com/NicolasPiccioni/SportHub" class="AllProjects__Links--Item"><svg  xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path></svg></a>
+
+                        </div>
+                    </div>
+
+                    <div class="AllProjects__Info--Container">
+                        <h3 class="AllProjects__Info--Title">SportHub</h3>
+                        <p class="AllProjects__Info--Description">Aplicación que permite administrar clubes deportivos y sus socios. El sistema permite registrar personas, asociarlas a clubes, asignarles deportes y consultar información relacionada con cada disciplina. Además, incluye la posibilidad de gestionar la información a través de archivos, lo que facilita el almacenamiento y la persistencia de los datos.</p>
+                    </div>
+
+                    <ul class="AllProjects__Languages--List">
+                        <li class="AllProjects__Languages--Item">C++</li>
+                        <li class="AllProjects__Languages--Item">Git</li>
+                        <li class="AllProjects__Languages--Item">GitHub</li>
+                    </ul>
+
+                </li>
+
+                <!-- Project IV -->
+
+                <li class="AllProjects__Item">
+
+                    <div class="AllProjects__Logos--Container">
+                        <span class="material-symbols-outlined AllProjects__Logos--Folder">folder</span>
+                        <div class="AllProjects__Links--Container">
+                            
+                            <a href="https://github.com/NicolasPiccioni/Front-Practice" class="AllProjects__Links--Item"><svg  xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path></svg></a>
+
+                        </div>
+                    </div>
+
+                    <div class="AllProjects__Info--Container">
+                        <h3 class="AllProjects__Info--Title">Curso HTML & CSS</h3>
+                        <p class="AllProjects__Info--Description">Práctica de HTML & CSS (Nativo), anotaciones sobre etiquetas, Formularios, Selectores, Box-Model, Flexbox, Grid, Animaciones, Transiciones, Responsive Design, Metodología BEM y Ejercicios.</p>
+                    </div>
+
+                    <ul class="AllProjects__Languages--List">
+                        <li class="AllProjects__Languages--Item">HTML</li>
+                        <li class="AllProjects__Languages--Item">CSS</li>
+                        <li class="AllProjects__Languages--Item">Git</li>
+                        <li class="AllProjects__Languages--Item">GitHub</li>
+                    </ul>
+
+                </li>
+
+                <!-- Project V -->
+
+                <li class="AllProjects__Item">
+
+                    <div class="AllProjects__Logos--Container">
+                        <span class="material-symbols-outlined AllProjects__Logos--Folder">folder</span>
+                        <div class="AllProjects__Links--Container">
+                            
+                            <a href="https://github.com/NicolasPiccioni/RickAndMorty-Fanpage" class="AllProjects__Links--Item"><svg  xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path></svg></a>
+
+                            <a href="https://nicolaspiccioni.github.io/RickAndMorty-Fanpage/" class="AllProjects__Links--Item"><svg  xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24" ><path d="M12.71 12.71 19 6.41V11h2V3h-8v2h4.59l-6.3 6.29z"></path><path d="M11 5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"></path></svg></a>
+
+                        </div>
+                    </div>
+
+                    <div class="AllProjects__Info--Container">
+                        <h3 class="AllProjects__Info--Title">Rick & Morty FanPage</h3>
+                        <p class="AllProjects__Info--Description">Sitio web interactivo sobre Rick and Morty. Se utilizó Flexbox y Grid Layout.</p>
+                    </div>
+
+                    <ul class="AllProjects__Languages--List">
+                        <li class="AllProjects__Languages--Item">HTML</li>
+                        <li class="AllProjects__Languages--Item">CSS</li>
+                        <li class="AllProjects__Languages--Item">Bootstrap</li>
+                        <li class="AllProjects__Languages--Item">Git</li>
+                        <li class="AllProjects__Languages--Item">GitHub</li>
+                    </ul>
+
+                </li>
+
+                <!-- Project VI -->
+
+                <li class="AllProjects__Item">
+
+                    <div class="AllProjects__Logos--Container">
+                        <span class="material-symbols-outlined AllProjects__Logos--Folder">folder</span>
+                        <div class="AllProjects__Links--Container">
+                            
+                            <a href="https://github.com/NicolasPiccioni/WebSite-Sharks" class="AllProjects__Links--Item"><svg  xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2" clip-rule="evenodd"></path></svg></a>
+
+                        </div>
+                    </div>
+
+                    <div class="AllProjects__Info--Container">
+                        <h3 class="AllProjects__Info--Title">Shark Website</h3>
+                        <p class="AllProjects__Info--Description">Sitio web de tiburones adaptado a diferentes dispositivos. Se utilizó Flex y Grid Layout</p>
+                    </div>
+
+                    <ul class="AllProjects__Languages--List">
+                        <li class="AllProjects__Languages--Item">HTML</li>
+                        <li class="AllProjects__Languages--Item">CSS</li>
+                        <li class="AllProjects__Languages--Item">Git</li>
+                        <li class="AllProjects__Languages--Item">GitHub</li>
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+        <!-- ----- Projects End -->
+
+    </main>
+
+    <footer class="Footer">
+        <p class="Footer__Text">© 2026 por Nicolás Piccioni <a href="https://github.com/NicolasPiccioni/Portfolio--NicolasPiccioni" target="_blank" class="Footer__Link">v1.0.3</a></p>
+        <p class="Footer__Text Footer__Text--II">Todos los derechos reservados</p>
+    </footer>
+    
+    <!-- ------------ Projects End ------------ -->
+    
+</body>
+</html>
