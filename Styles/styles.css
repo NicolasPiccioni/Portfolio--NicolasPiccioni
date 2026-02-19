@@ -115,6 +115,8 @@ p{
     object-fit: cover;
     object-position: top;
     box-shadow: 0 0px 6px var(--color-highlight-blue);
+
+    user-select: none;
 }
 
 /* [¡] ----- Menu Items Containers ----- [!] */
@@ -147,6 +149,8 @@ p{
     border-top-right-radius: 24px;
 
     color: var(--color-text-primary);
+
+    user-select: none;
 }
 
 .MenuSticky__Link:hover{
@@ -209,6 +213,8 @@ p{
     padding: 12px;
 
     line-height: 0;
+
+    user-select: none;
 }
 
 .NavSticky__Expand--Icon{
@@ -301,6 +307,8 @@ p{
     object-fit: cover;
     object-position: top;
     box-shadow: 0 0px 6px var(--color-accent);
+
+    user-select: none;
 }
 
 /* [¡] ----- Toggle Button ----- [!] */
@@ -319,6 +327,7 @@ p{
     padding: 12px;
 
     line-height: 0;
+    user-select: none;
 }
 
 .NavExpand__Close--Label:hover > span{
@@ -365,6 +374,8 @@ p{
     font-size: 1.6rem;
     text-decoration: none;
     color: var(--color-text-primary);
+
+    user-select: none;
 }
 
 .MenuExpand__Link:hover{
@@ -1008,6 +1019,8 @@ p{
     align-items: center;
 
     width: 48px;
+
+    user-select: none;
 }
 
 .CertificationItem--ExpandButton{
@@ -1368,7 +1381,7 @@ p{
         left: 16px;
         right: auto;
 
-        background: linear-gradient(to right, var(--color-accent), #0fb9a7);
+        background: linear-gradient(to right, var(--color-accent), var(--color-highlight-blue));
     }
 
     .TimeLineCard__Cicle--Left::after{
@@ -1488,11 +1501,11 @@ p{
 /* [+] ------------ Titles ------------ [+] */
 
 .MainTitle{
-    width: 45%;
+    width: fit-content;
     padding: 24px 18px 18px;
     margin: 0;
 
-    border-bottom: 1px solid #3336;
+    border-bottom: 2px solid var(--color-accent-soft);
 
     letter-spacing: 1.2px;
     font-size: clamp(1rem, 2.5vw, 3rem);
@@ -1841,12 +1854,14 @@ p{
     .TopProjects__Container{
         display: block;
         grid-column: 1 / -1;
-        align-self: center;
+        align-self: end;
 
         width: 100%;
         height: fit-content;
 
         padding: 12px;
+
+        background: linear-gradient(to top, var(--color-bg-secondary) 50%, transparent);
     }
 
     /* [¡] ----- Grid II ----- [!] */ 
